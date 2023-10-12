@@ -38,25 +38,25 @@ const reset= ()=>{
     <Form className="" onSubmit={submitHandler}>
       <Row>
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)} maxLength={20}/>
+          <Form.Control placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)} maxLength={20} requiere/>
         </Col>
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control placeholder="Descripcion" value={desc} onChange={(e)=>setDesc(e.target.value)} minLength={40} maxLength={50}/>
+          <Form.Control placeholder="Descripcion" value={desc} onChange={(e)=>setDesc(e.target.value)} minLength={40} maxLength={50} requiere/>
         </Col>
       </Row>
       <Row >
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control placeholder="Precio" type='number'  value={price} onChange={(e)=>setPrice(e.target.value)}/>
+          <Form.Control placeholder="Precio" type='number'  value={price} onChange={(e)=>setPrice(e.target.value)} requiere/>
         </Col>
         <Col xs={12} md={6} className='pt-3'>
-        <Form.Control placeholder="Imagen-URL" type='url'  value={img} onChange={(e)=>setImg(e.target.value)}/>
+        <Form.Control placeholder="Imagen-URL" type='url'  value={img} onChange={(e)=>setImg(e.target.value)} requiere/>
         </Col>
       </Row>
       <div className='pt-3 w-100 d-flex justify-content-md-end gap-3 justify-content-center' >
       <Button variant="primary" size="lg" active type='submit'>
         Agregar Producto
       </Button>
-      <Button variant="secondary" size="lg" active type='button'>
+      <Button variant="secondary" size="lg" active type='button' onClick={reset}>
         Cancelar
       </Button>
       </div>

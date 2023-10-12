@@ -66,18 +66,18 @@ const Product =({product})=>{
         <Modal.Body>
       <Row>
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control  value={name} onChange={(e)=>setName(e.target.value)}  maxLength={20}/>
+          <Form.Control  value={name} onChange={(e)=>setName(e.target.value)}  maxLength={20} requiere/>
         </Col>
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control  value={desc} onChange={(e)=>setDesc(e.target.value)}  minLength={40} maxLength={50}/>
+          <Form.Control  value={desc} onChange={(e)=>setDesc(e.target.value)}  minLength={40} maxLength={50} requiere/>
         </Col>
       </Row>
       <Row >
         <Col xs={12} md={6} className='pt-3'>
-          <Form.Control  type='number'  value={price} onChange={(e)=>setPrice(e.target.value)}/>
+          <Form.Control  type='number'  value={price} onChange={(e)=>setPrice(e.target.value)} requiere/>
         </Col>
         <Col xs={12} md={6} className='pt-3'>
-        <Form.Control  type='url'  value={img} onChange={(e)=>setImg(e.target.value)}/>
+        <Form.Control  type='url'  value={img} onChange={(e)=>setImg(e.target.value)} requiere/>
         </Col>
       </Row>
       </Modal.Body>

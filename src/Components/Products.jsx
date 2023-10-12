@@ -7,7 +7,7 @@ const Products = ()=>{
     return (
   <main className="mt-5 w-100 d-flex justify-content-center ">
     <section className=" d-flex gap-4" style={{ width: '90%' }}> 
-    {ctx.products.map((product)=><Product product={product} key={product.key}/>)}
+    {ctx.products.sort((a,b)=>a.name.localeCompare(b.name)).map((product)=><Product product={product} key={product.key}/>)}
     </section>
    
   </main>
