@@ -37,12 +37,13 @@ const Product =({product})=>{
             price:price,
             img:img}
             put("https://desafio-15-default-rtdb.firebaseio.com/Products",product.key ,ctx.get,data)
+            handleModal()
     }}
  
     return(
-       <> <Card className='position-relative' style={{ width: '18rem' }}>
+       <> <Card className='position-relative shadow rounded' style={{ width: '18rem' }}>
         <CloseButton className='position-absolute ' style={{ right: '0' }} onClick={deleteHandler}/>
-      <Card.Img variant="top" src={product.img} />
+      <Card.Img variant="top" src={product.img} style={{ height: '190px', width:'286' }} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>
@@ -82,7 +83,7 @@ const Product =({product})=>{
       </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleModal}>Close</Button>
-          <Button variant="primary" type='submit' onClick={handleModal}>Save changes</Button>
+          <Button variant="primary" type='submit' >Save changes</Button>
         </Modal.Footer>
     </Form>
 

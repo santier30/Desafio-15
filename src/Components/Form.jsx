@@ -1,6 +1,7 @@
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import usePost from '../Hooks/usePost';
 import { useState , useContext } from 'react';
@@ -33,7 +34,8 @@ const reset= ()=>{
 };
     return (
         <header className="w-100 d-flex justify-content-center">
-    <Form className="w-75" onSubmit={submitHandler}>
+          <Card className="w-75 d-flex justify-content-center shadow rounded p-2 mt-4">
+    <Form className="" onSubmit={submitHandler}>
       <Row>
         <Col xs={12} md={6} className='pt-3'>
           <Form.Control placeholder="Nombre" value={name} onChange={(e)=>setName(e.target.value)} maxLength={20}/>
@@ -58,7 +60,7 @@ const reset= ()=>{
         Cancelar
       </Button>
       </div>
-    </Form>
+    </Form> </Card>
         </header>
     );
 }
