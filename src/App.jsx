@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Add from './Components/Form';
-import Products from './Components/Products';
+import Add from './Components/Add/Form';
+import Products from './Components/Product/Products';
 import useGet from './Hooks/use-get';
 import { useEffect } from 'react';
 import Context from './Components/Context';

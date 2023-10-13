@@ -1,6 +1,6 @@
 import Product from "./Product";
 import {  useContext } from 'react';
-import Context from './Context';
+import Context from '../Context';
 const Products = ()=>{
     const ctx = useContext(Context);
 
